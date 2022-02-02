@@ -46,10 +46,24 @@ body{
   font-family: "Roboto Condensed", sans-serif !important;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 /*****************NAVBAR********************/
+
+
 .logo{
   width: 5rem;
   margin: 0.5rem;
+}
+
+@media(max-width: 768px){
+  .logo{
+    width: 4rem;
+  }
+
 }
 
 .navbar-brand{
@@ -108,17 +122,29 @@ nav ul li a{
   align-items: center;
   text-align: center;
   font-family: "Roboto Condensed", sans-serif !important;
+  
 }
 
 .main-info h1{
   
   text-transform: uppercase;
-  font-size: 5rem;
+  font-size: 7rem;
+  text-shadow: #61dafb;
   color: var(--primary-red);
   font-weight: bold;
 }
 
-.typed-once, .typed-text{
+@media(max-width: 768px){
+  .main-info h1{
+    font-size: 3rem !important;
+  }
+  .typed-text{
+    font-size: 1.5rem !important;
+  }
+
+}
+
+.typed-text{
   font-size: 2rem;
   color: var(--primary-white);
 }
@@ -126,7 +152,76 @@ nav ul li a{
 /**************PARTICLES****************/
 #tsparticles{
   position: absolute;
-  height: 100vh;
-  width: 100vw;
-  z-index: 1;
+  top: 0;
+  height: inherit;
+  width: 100%;
+}
+
+
+
+/***************ABOUT ME******************/
+#root > div.container.my-5 > div{
+  max-width: 100%;
+}
+
+
+.profile-image{
+  width: 25rem;
+  height: 25rem;
+  padding: 0.625rem;
+  border: 0.125rem solid #f82727;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+@media(max-width: 768px){
+  .profile-image{
+    width: 18rem;
+    height: 18rem;
+  }
+}
+
+.about-info > h2{
+  text-transform: uppercase;
+  font-size: 7rem;
+  color: var(--primary-red);
+  font-weight: bold;
+}
+
+@media(max-width: 768px){
+  .about-info > h2{
+    font-size: 3.2rem;
+    text-align: center;
+  }
+  #root > div.container.my-5 > div > div.container.about-info.col{
+    padding-top: 0.7rem;
+  }
+}
+
+.about-info > h3{
+  color: var(--primary-red);
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.about-info > h4{
+  font-size: 0.8rem;
+  color: var(--primary-red);
+}
+
+.about-info > p{
+  font-size: 1rem;
+  
+}
+
+@media(max-width: 768px){
+  .about-info > h3{
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .about-info > h4{
+    
+    text-align: center;
+  }
 }

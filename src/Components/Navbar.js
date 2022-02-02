@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import logo from "../logo.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import About from './About';
 
 export default function Navbar() {
     return (
         <>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
                 <div className="container">
                     <div className="container-fluid">
                         <a className="navbar-brand" href="#"><img src={logo} alt="logo..." className='logo' /></a>
@@ -21,7 +21,7 @@ export default function Navbar() {
                                     <a className="nav-link" aria-current="page" href="#">Home</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">About</a>
+                                    <a className="nav-link" href={About}>About</a>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href="#">Projects</a>
