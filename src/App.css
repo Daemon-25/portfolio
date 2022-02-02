@@ -40,6 +40,7 @@
 
 :root{
   --primary-red: #f82727;
+  --primary-white: #ffffff;
 }
 body{
   font-family: "Roboto Condensed", sans-serif !important;
@@ -82,3 +83,50 @@ nav ul li a{
 .navbar-nav > li > a.active:hover, .navbar-nav > li > a:hover{
   border-top: 0.1875rem solid var(--primary-red);
 }
+
+
+/***********HEADER************/
+.header-wraper{
+  background: url(./laptop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 82.9vh;
+  opacity: 0.95;
+}
+
+.main-info{
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left:0;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif !important;
+}
+
+.main-info h1{
+  
+  text-transform: uppercase;
+  font-size: 5rem;
+  color: var(--primary-red);
+  font-weight: bold;
+}
+
+.typed-once, .typed-text{
+  font-size: 2rem;
+  color: var(--primary-white);
+}
+
+/**************PARTICLES****************/
+/* #tsparticles{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+} */
