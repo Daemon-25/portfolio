@@ -4,7 +4,7 @@ import profile from '../Profile.JPG'
 const About = () => {
   return (
       <>
-      <div className="container my-5">
+      <div className="container about-wrapper my-5 ">
         <div className="container about-section row ">
             <div className="container profile col"><img src={profile} alt="my picture"className='profile-image'/></div>
             <div className="container about-info col">

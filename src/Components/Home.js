@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Navbar from './Navbar';
 import Header from './Header';
 import About from './About';
+import Skills from './Skills';
 
 
 export default function Home(){
@@ -10,7 +11,7 @@ export default function Home(){
             <Navbar/>
             <Header/>
             <About/>
-            
+            <Skills/>
         </>
     )
 

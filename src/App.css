@@ -51,8 +51,17 @@ html, body {
   overflow-x: hidden;
 }
 
-/*****************NAVBAR********************/
+.row{
+  min-width: fit-content;
+}
 
+
+/*****************NAVBAR********************/
+nav{
+  position: fixed !important;
+  min-width: 100% !important;
+  z-index: 2 !important;
+}
 
 .logo{
   width: 5rem;
@@ -67,7 +76,7 @@ html, body {
 }
 
 .navbar-brand{
-  max-width:fit-content
+  max-width:fit-content;
 }
 
 .container-fluid{
@@ -81,6 +90,7 @@ html, body {
 
 /*********MENU LINKS**********/
 nav ul li{
+  
   letter-spacing: 0.0375rem;
   cursor: pointer;
   text-transform: uppercase;
@@ -89,13 +99,22 @@ nav ul li{
   font-size: 20px;
 }
 
+@media(max-width: 768px){
+  nav ul li{
+    margin-left: 1.8rem;
+  }
+
+}
+
 nav ul li a{
   border-top: 0.1875rem solid rgba(255, 255, 255, 0);
+  
 }
 
 
 .navbar-nav > li > a.active:hover, .navbar-nav > li > a:hover{
   border-top: 0.1875rem solid var(--primary-red);
+  transform: scaleX(1.2) scaleY(1.2);
 }
 
 
@@ -105,6 +124,7 @@ nav ul li a{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  
   position: relative;
   height: 82.9vh;
   opacity: 0.95;
@@ -129,7 +149,7 @@ nav ul li a{
   
   text-transform: uppercase;
   font-size: 7rem;
-  text-shadow: #61dafb;
+  text-shadow: 1px 1px #61dafb;
   color: var(--primary-red);
   font-weight: bold;
 }
@@ -164,6 +184,14 @@ nav ul li a{
   max-width: 100%;
 }
 
+.about-wrapper{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.profile{
+  text-align: center;
+}
 
 .profile-image{
   width: 25rem;
@@ -183,7 +211,8 @@ nav ul li a{
 
 .about-info > h2{
   text-transform: uppercase;
-  font-size: 7rem;
+  font-size: 5rem;
+  text-shadow: 1px 1px #282c34;
   color: var(--primary-red);
   font-weight: bold;
 }
@@ -224,4 +253,45 @@ nav ul li a{
     
     text-align: center;
   }
+}
+
+/***********SKILLS**************/
+.skill > h3{
+  text-align: center;
+  font-size: 3rem;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+.cards{
+  padding-bottom: 8vh;
+}
+
+.cards .card{
+  border-bottom: 4px solid var(--primary-red);
+  min-height: 40vh;
+  border-radius: 20px 20px 0px 0px;
+}
+
+@media(max-width: 768px){
+  .cards .card{
+    min-width: max-content;
+    margin-bottom: 50px;
+  }
+
+  .cards{
+    padding-bottom: 0;
+  }
+}
+
+.card-title{
+  font-weight: bold;
+}
+
+.icon{
+  height: 3rem !important;
+  min-width: -webkit-fill-available;
+  color: var(--primary-white);
+  background-color: var(--primary-red);
+  border-radius: 100%;
 }
