@@ -1,13 +1,14 @@
-import React, { Component } from 'react';
+import React, {useState, useEffect, useRef, useCallback } from 'react';
 import logo from "../logo.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
-export default function Navbar() {
+export const Navbar = () => {
     return (
         <>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div className="container">
+        
+            <nav className={`navbar fixed-top navbar-expand-lg navbar-dark bg-dark`} >
+                <div className="container" data-spy="affix" data-offset-top="0">
                     <div className="container-fluid">
                         <a className="navbar-brand" href="#"><img src={logo} alt="logo..." className='logo' /></a>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,6 +36,8 @@ export default function Navbar() {
                 </div>
             </nav>
         </>
-    )
+    );
 
 } 
+
+export default Navbar;

@@ -1,7 +1,7 @@
 import React from 'react';
 import profile from '../Profile.JPG'
 
-const About = () => {
+function About () {
   return (
       <>
       <div className="container about-wrapper my-5 ">

@@ -1,47 +1,10 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 
 :root{
   --primary-red: #f82727;
   --primary-white: #ffffff;
 }
+
 body{
   font-family: "Roboto Condensed", sans-serif !important;
 }
@@ -58,9 +21,8 @@ html, body {
 
 /*****************NAVBAR********************/
 nav{
-  position: fixed !important;
-  min-width: 100% !important;
-  z-index: 2 !important;
+  padding-top: 0% !important;
+  padding-bottom: 0 !important;
 }
 
 .logo{
@@ -124,9 +86,9 @@ nav ul li a{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  
+  padding-top: 60rem;
   position: relative;
-  height: 82.9vh;
+  
   opacity: 0.95;
 }
 
@@ -173,7 +135,7 @@ nav ul li a{
 #tsparticles{
   position: absolute;
   top: 0;
-  height: inherit;
+  height: -webkit-fill-available;
   width: 100%;
 }
 
@@ -187,6 +149,7 @@ nav ul li a{
 .about-wrapper{
   padding-top: 50px;
   padding-bottom: 50px;
+  
 }
 
 .profile{
@@ -269,8 +232,24 @@ nav ul li a{
 
 .cards .card{
   border-bottom: 4px solid var(--primary-red);
-  min-height: 40vh;
+  min-height: 20rem;
   border-radius: 20px 20px 0px 0px;
+}
+
+.cards .card:hover{
+  border-bottom: 4px solid #282c34;
+  background-color: var(--primary-red);
+  color: var(--primary-white);
+  
+}
+
+.cards .card:hover .card-title{
+  color: black;
+}
+
+.cards .card:hover .icon{
+  color: #282c34;
+  background-color: var(--primary-white);
 }
 
 @media(max-width: 768px){
@@ -284,14 +263,99 @@ nav ul li a{
   }
 }
 
+
 .card-title{
   font-weight: bold;
 }
 
+.icon-container{
+  text-align: center;
+  
+}
+
 .icon{
   height: 3rem !important;
-  min-width: -webkit-fill-available;
+  padding: 15px;
+  min-width: 4.5rem;
+  min-height: 4.5rem;
   color: var(--primary-white);
   background-color: var(--primary-red);
   border-radius: 100%;
 }
+
+/**********************PROJECTS****************************************/
+.projects-wrapper h2{
+  text-align: center;
+  color: var(--primary-red);
+  font-size: 3rem;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+.projects-card{
+  padding-bottom: 8vh;
+}
+
+.projects-card .card{
+  min-height: 10rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.project-img{
+  min-height: inherit;
+  min-width: inherit;
+  
+}
+
+@media(max-width: 768px){
+  .projects-card .card{
+    margin-bottom: 50px;
+  }
+
+  .projects-card{
+    padding-bottom: 0;
+  }
+}
+
+/**********************FOOTER****************************************/
+.footer-wraper{
+  background-color: #282c34;
+}
+
+.foot2{
+  min-width: 24rem;
+}
+
+@media(max-width: 768px){
+  .foot2{
+    min-width: fit-content;
+    padding-bottom: 2vh;
+    
+    margin-right: 30px;
+  }
+  .foot2 .link{
+  text-align: center;
+  }
+}
+
+.foot2 h3{
+  color: var(--primary-red);
+  font-weight: bold;
+  line-height: 3rem;
+}
+
+.foot3 h4{
+  color: var(--primary-red);
+
+}
+
+.link{
+  color: var(--primary-red);
+  text-decoration: none;
+}
+
+.link:hover{
+  color: var(--primary-white);
+}
+

@@ -17,10 +17,9 @@ const Header = () => {
                                 'Web Developer',
                                 'Android App Developer',
                                 'DIP Enthusiast']}
-                            typeSpeed={40}
-                            backSpeed={60}
+                            typeSpeed={60}
+                            backSpeed={40}
                             loop >
-
                         </Typed>
                     </div>
                 </div>

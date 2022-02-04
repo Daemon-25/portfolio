@@ -3,6 +3,8 @@ import Navbar from './Navbar';
 import Header from './Header';
 import About from './About';
 import Skills from './Skills';
+import { Projects } from './Projects';
+import { Footer } from './Footer';
 
 
 export default function Home(){
@@ -12,6 +14,8 @@ export default function Home(){
             <Header/>
             <About/>
             <Skills/>
+            <Projects/>
+            <Footer/>
         </>
     )
 
