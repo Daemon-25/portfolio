@@ -213,7 +213,7 @@ nav ul li a{
 }
 
 .about-info > p{
-  font-size: 1rem;
+  font-size: 1.2rem;
   
 }
 
@@ -329,6 +329,33 @@ nav ul li a{
   }
 }
 
+/*************************MODAL***************************/
+.modal-title{
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.modal-footer{
+  padding: 1rem;
+  border-top: 0.5px solid #282c34;
+}
+
+.modal-body img{
+  width: 100%;
+  height: 60vh;
+}
+
+@media(max-width: 768px){
+  .modal-body img{
+    width: 100%;
+    height: 23vh;
+  }
+}
+
+.modal-footer p{
+  text-align: left;
+}
+
 /**********************FOOTER****************************************/
 .footer-wraper{
   background-color: #282c34;
@@ -363,37 +390,10 @@ nav ul li a{
 }
 
 .link{
-  color: var(--primary-red);
+  color: var(--primary-white);
   text-decoration: none;
 }
 
 .link:hover{
-  color: var(--primary-white);
-}
-
-/*************************MODAL***************************/
-.modal-title{
-  font-weight: bold;
-  font-size: 1.6rem;
-}
-
-.modal-footer{
-  padding: 1rem;
-  border-top: 0.5px solid #282c34;
-}
-
-.modal-body img{
-  width: 100%;
-  height: 60vh;
-}
-
-@media(max-width: 768px){
-  .modal-body img{
-    width: 100%;
-    height: 23vh;
-  }
-}
-
-.modal-footer p{
-  text-align: left;
+  color: var(--primary-red);
 }
