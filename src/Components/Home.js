@@ -1,4 +1,4 @@
-import React, { useRef, props } from 'react';
+import React, { useRef } from 'react';
 import Navbar from './Navbar';
 import Header from './Header';
 import About from './About';
@@ -10,10 +10,6 @@ import { Footer } from './Footer';
 export default function Home(){
     const about = useRef();
     const projects = useRef();
-
-    const handleTop = () => {
-        window.scrollY(0);
-    }
 
     const handleAbout = () => {
         window.scrollTo(0, about.current.offsetTop-150);
