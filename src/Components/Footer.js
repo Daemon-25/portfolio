@@ -1,5 +1,6 @@
 import React from 'react';
 import bitmoji from '../coffee.png'
+import resume from '../Resume2.pdf'
 
 export const Footer = () => {
   return (
@@ -23,7 +24,7 @@ export const Footer = () => {
                     <a href="mailto:lakshayrose0000@gmail.com" className="link">lakshayrose0000@gmail.com</a>
                     <br/><br />
                     <h4>Take a look at my resume</h4>
-                    <a href="" className='link' >Resume</a>
+                    <a href={resume} className='link' target="_blank" rel='noreferrer'>Resume</a>
                 </div>
             </div>
             </div>

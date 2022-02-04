@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useRef, props } from 'react';
 import Navbar from './Navbar';
 import Header from './Header';
 import About from './About';
@@ -8,13 +8,28 @@ import { Footer } from './Footer';
 
 
 export default function Home(){
+    const about = useRef();
+    const projects = useRef();
+
+    const handleTop = () => {
+        window.scrollY(0);
+    }
+
+    const handleAbout = () => {
+        window.scrollTo(0, about.current.offsetTop-150);
+    }
+
+    const handleProjects = () => {
+        window.scrollTo(0, projects.current.offsetTop-115);
+    }
+
     return(
         <>
-            <Navbar/>
+            <Navbar handleAbout={handleAbout} handleProjects={handleProjects}/>
             <Header/>
-            <About/>
+            <About about={about}/>
             <Skills/>
-            <Projects/>
+            <Projects projects={projects}/>
             <Footer/>
         </>
     )

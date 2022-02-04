@@ -1,10 +1,11 @@
 import React from 'react';
 import profile from '../Profile.JPG'
 
-function About () {
+function About (props) {
+  const { about } = props;
   return (
       <>
-      <div className="container about-wrapper my-5 ">
+      <div className="container about-wrapper my-5 " ref={about}>
         <div className="container about-section row ">
             <div className="container profile col"><img src={profile} alt="my picture"className='profile-image'/></div>
             <div className="container about-info col">

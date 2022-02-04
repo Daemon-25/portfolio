@@ -321,17 +321,18 @@ nav ul li a{
 /**********************FOOTER****************************************/
 .footer-wraper{
   background-color: #282c34;
-}
-
-.foot2{
-  min-width: 24rem;
+  width: 100%;
 }
 
 @media(max-width: 768px){
+  .footer-wraper{
+    padding-bottom: 2rem;
+    
+  }
   .foot2{
     min-width: fit-content;
     padding-bottom: 2vh;
-    
+    max-width: 24vw;
     margin-right: 30px;
   }
   .foot2 .link{
@@ -359,3 +360,7 @@ nav ul li a{
   color: var(--primary-white);
 }
 
+/*************************MODAL***************************/
+.modal-header{
+  
+}

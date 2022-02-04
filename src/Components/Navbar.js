@@ -1,12 +1,14 @@
-import React, {useState, useEffect, useRef, useCallback } from 'react';
+import React from 'react';
 import logo from "../logo.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import resume from '../Resume2.pdf'
 
-export const Navbar = () => {
+export const Navbar = (props) => {
+    const { handleAbout, handleProjects } = props;
+
     return (
         <>
-        
             <nav className={`navbar fixed-top navbar-expand-lg navbar-dark bg-dark`} >
                 <div className="container" data-spy="affix" data-offset-top="0">
                     <div className="container-fluid">
@@ -21,13 +23,13 @@ export const Navbar = () => {
                                     <a className="nav-link" aria-current="page" href="#">Home</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">About</a>
+                                    <a className="nav-link" onClick={handleAbout}>About</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">Projects</a>
+                                    <a className="nav-link" onClick={handleProjects}>Projects</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">Resume</a>
+                                    <a className="nav-link" href={resume} target="_blank" rel='noreferrer'>Resume</a>
                                 </li>
                             </ul>
 
