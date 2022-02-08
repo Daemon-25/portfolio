@@ -13,7 +13,7 @@ function About (props) {
                 <h3>Lakshay Rose</h3>
                 <h4>IT Undergrad 2020-2024</h4>
                 <h4>NIT Kurukshetra</h4>
-                <p>I am very passionate about development and has various skills of profesional efficiency. Alongwith writing clean code I love to include my work with competent design. Some of my other interests include doing dumb shit, photography and gaming.</p>
+                <p>I am very passionate about development and has various skills of professional efficiency. Alongwith writing clean code I love to include my work with competent design. Some of my other interests include doing dumb shit, photography and gaming.</p>
             </div>
         </div>
         </div>

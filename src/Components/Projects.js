@@ -1,5 +1,7 @@
 import React, { useState, useRef } from 'react';
-import project from '../download.png'
+import project1 from '../Project1.png'
+import project2 from '../Project2.png'
+import project3 from '../Project3.png'
 
 export const Projects = (props) => {
     const myRef = useRef();
@@ -9,40 +11,30 @@ export const Projects = (props) => {
     const [link, setLink] = useState("");
 
     const handleProject1 = (e) => {
-        setTitle("Project 1");
-        setDesc("Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quis possimus veritatis adipisci. Excepturi ullam omnis")
-        setImage(project);
-        setLink("link");
+        setTitle("MERN Stack");
+        setDesc("A MERN Stack project which allows user authorisation and signup and allows users to make new, edit or delete notes.")
+        setImage(project1);
+        setLink("https://github.com/Daemon-25/myNotebook");
 
         e.preventDefault();
         myRef.current.click();
     }
 
     const handleProject2 = (e) => {
-        setTitle("Project 2");
-        setDesc("Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quis possimus veritatis adipisci. Excepturi ullam omnis");
-        setImage(project);
-        setLink("link");
+        setTitle("Android Studio");
+        setDesc("An Event booking app created using Android Studio Manager, where the users can book seaats for the events and pay on the site.");
+        setImage(project2);
+        setLink("https://github.com/Daemon-25/Android-Study-Jam-Project-1");
 
         e.preventDefault();
         myRef.current.click();
     }
 
     const handleProject3 = (e) => {
-        setTitle("Project 3");
-        setDesc("Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quis possimus veritatis adipisci. Excepturi ullam omnis")
-        setImage(project);
-        setLink("link");
-
-        e.preventDefault();
-        myRef.current.click();
-    }
-
-    const handleProject4 = (e) => {
-        setTitle("Project 4");
-        setDesc("Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quis possimus veritatis adipisci. Excepturi ullam omnis")
-        setImage(project);
-        setLink("link");
+        setTitle("OpenCV");
+        setDesc("Canvas Drawing project using Image Processing library OpenCV in Python in which you can use Pens to draw on a canvas during a live camera feed.")
+        setImage(project3);
+        setLink("https://github.com/Daemon-25/Canvas-Drawing");
 
         e.preventDefault();
         myRef.current.click();
@@ -69,7 +61,7 @@ export const Projects = (props) => {
                         <div className="modal-footer justify-content-start">
                             <p>{desc}</p>
                             <p>Github:</p>
-                            <a href="">{link}</a>
+                            <a href={link}>{link}</a>
                         </div>
                     </div>
                 </div>
@@ -80,16 +72,13 @@ export const Projects = (props) => {
                 <h2 className='my-2'>Some Projects by me</h2>
                 <div className="container projects-card row align-content-center justify-content-evenly align-items-center">
                     <div className="card" style={{ width: "18rem" }}>
-                        <img src={project} className="card-img-top project-img" alt="Project1" onClick={handleProject1} />
+                        <img src={project1} className="card-img-top project-img" alt="Project1" onClick={handleProject1} />
                     </div>
                     <div className="card" style={{ width: "18rem" }}>
-                        <img src={project} className="card-img-top project-img" alt="Project2" onClick={handleProject2} />
+                        <img src={project2} className="card-img-top project-img" alt="Project2" onClick={handleProject2} />
                     </div>
                     <div className="card" style={{ width: "18rem" }}>
-                        <img src={project} className="card-img-top project-img" alt="Project3" onClick={handleProject3} />
-                    </div>
-                    <div className="card" style={{ width: "18rem" }}>
-                        <img src={project} className="card-img-top project-img" alt="Project4" onClick={handleProject4} />
+                        <img src={project3} className="card-img-top project-img" alt="Project3" onClick={handleProject3} />
                     </div>
                 </div>
             </div>
